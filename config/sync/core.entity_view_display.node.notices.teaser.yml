@@ -1,0 +1,24 @@
+uuid: 3f71c6f7-3dac-4520-933f-992789597f12
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.notices.field_description
+    - field.field.node.notices.field_event_date
+    - node.type.notices
+  module:
+    - user
+id: node.notices.teaser
+targetEntityType: node
+bundle: notices
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_description: true
+  field_event_date: true

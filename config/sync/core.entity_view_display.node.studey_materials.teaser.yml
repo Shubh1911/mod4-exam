@@ -1,0 +1,32 @@
+uuid: 90a56a93-634b-4917-997f-891b953f6d70
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.studey_materials.field_description
+    - field.field.node.studey_materials.field_document
+    - field.field.node.studey_materials.field_img
+    - field.field.node.studey_materials.field_stream
+    - field.field.node.studey_materials.field_subject
+    - field.field.node.studey_materials.field_video1
+    - node.type.studey_materials
+  module:
+    - user
+id: node.studey_materials.teaser
+targetEntityType: node
+bundle: studey_materials
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_description: true
+  field_document: true
+  field_img: true
+  field_stream: true
+  field_subject: true
+  field_video1: true

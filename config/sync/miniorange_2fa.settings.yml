@@ -1,0 +1,24 @@
+mo_auth_enable_backdoor: 1
+allow_end_users_to_decide: false
+mo_auth_custom_organization_name: login
+mo_auth_2fa_kba_questions: Allowed
+mo_auth_rba_duration: 3
+rba_allowed_devices: 1
+mo_auth_customer_admin_email: shubham.pareek@innoraft.com
+mo_auth_customer_admin_phone: ''
+mo_auth_customer_id: 322358
+mo_auth_customer_api_key: PQdvNv3aA1ryjaC8U29LuCzImOJWjmGj
+mo_auth_customer_token_key: WdQZZoL1mjhSiwg6
+mo_auth_customer_app_secret: Vv4c0SrJi9XeT9xK
+mo_auth_firstuser_id: '1'
+mo_auth_status: PLUGIN_CONFIGURATION
+mo_auth_2fa_license_type: DRUPAL_2FA_PLUGIN
+mo_auth_2fa_license_plan: drupal_2fa_premium_plan
+mo_auth_2fa_license_no_of_users: 10
+mo_auth_2fa_ivr_remaining: 0
+mo_auth_2fa_sms_remaining: 20
+mo_auth_2fa_email_remaining: 20
+mo_auth_2fa_license_expiry: '2023-Aug-25 00:00:00'
+mo_auth_2fa_support_expiry: '2023-Aug-18 00:00:00'
+mo_auth_enable_two_factor: true
+mo_auth_enforce_inline_registration: true

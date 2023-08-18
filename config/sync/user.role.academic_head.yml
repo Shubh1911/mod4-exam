@@ -1,0 +1,14 @@
+uuid: 035485b4-0b85-49e1-8f34-34449c6b1786
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.studey_materials
+  module:
+    - node
+id: academic_head
+label: 'Academic Head'
+weight: 5
+is_admin: null
+permissions:
+  - 'edit any studey_materials content'

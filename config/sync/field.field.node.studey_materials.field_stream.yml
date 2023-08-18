@@ -1,0 +1,29 @@
+uuid: 6304ba14-5685-45b1-8b8b-23ab6bc66dd5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_stream
+    - node.type.studey_materials
+    - taxonomy.vocabulary.branch
+id: node.studey_materials.field_stream
+field_name: field_stream
+entity_type: node
+bundle: studey_materials
+label: stream
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      branch: branch
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

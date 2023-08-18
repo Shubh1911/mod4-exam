@@ -1,0 +1,81 @@
+uuid: ec516302-8d2d-4f7e-86ee-b5fadfb15b15
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.studey_materials.field_description
+    - field.field.node.studey_materials.field_document
+    - field.field.node.studey_materials.field_img
+    - field.field.node.studey_materials.field_stream
+    - field.field.node.studey_materials.field_subject
+    - field.field.node.studey_materials.field_video1
+    - node.type.studey_materials
+  module:
+    - file
+    - image
+    - user
+    - video_embed_field
+id: node.studey_materials.default
+targetEntityType: node
+bundle: studey_materials
+mode: default
+content:
+  field_description:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_document:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_img:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_stream:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_subject:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_video1:
+    type: video_embed_field_video
+    label: above
+    settings:
+      autoplay: true
+      responsive: true
+      width: 854
+      height: 480
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

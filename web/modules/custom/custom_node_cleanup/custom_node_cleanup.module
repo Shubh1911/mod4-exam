@@ -1,0 +1,47 @@
+<?php
+/**
+ * Implements hook_cron().
+ */
+function custom_node_cleanup_cron()
+{
+    // Get the current timestamp.
+    $current_time = \Drupal::time()->getCurrentTime();
+
+    // Calculate the timestamp for 6 months ago.
+    $six_months_ago = $current_time - (6 * 30 * 24 * 60 * 60); // Assuming 30 days per month.
+
+    // Query for student records whose graduation is older than 6 months.
+    $query = \Drupal::database()->select('user__field_passing_year', 'u');
+    $query->addField('u', 'entity_id');
+    $query->condition('u.bundle', 'user');
+    $query->condition('u.field_passing_year_value', $six_months_ago, '<');
+    $stale_student_ids = $query->execute()->fetchCol();
+
+    // Delete the student records.
+    if (!empty($stale_student_ids)) {
+        \Drupal::entityTypeManager()->getStorage('user')->delete($stale_student_ids);
+    }
+
+
+    /**
+     * Implements hook_cron().
+     */
+    function your_custom_module_cron()
+    {
+        // Get the current timestamp.
+        $current_time = \Drupal::time()->getCurrentTime();
+
+        // Query for notices with event dates in the past.
+        $query = \Drupal::database()->select('node__field_event_date', 'n');
+        $query->addField('n', 'entity_id');
+        $query->condition('n.bundle', 'notices');
+        $query->condition('n.field_event_date_value', $current_time, '<');
+        $outdated_notice_ids = $query->execute()->fetchCol();
+
+        // Delete the outdated notices.
+        if (!empty($outdated_notice_ids)) {
+            \Drupal::entityTypeManager()->getStorage('node')->delete($outdated_notice_ids);
+        }
+    }
+
+}

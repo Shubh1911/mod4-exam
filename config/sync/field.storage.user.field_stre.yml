@@ -1,0 +1,20 @@
+uuid: 7721326e-b537-4efc-9258-5dbd1a335361
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - user
+id: user.field_stre
+field_name: field_stre
+entity_type: user
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
