@@ -1,0 +1,30 @@
+uuid: 05492b27-364d-4ac0-9b63-a49c3fd481d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.branch.field_suject
+    - taxonomy.vocabulary.branch
+  module:
+    - text
+id: taxonomy_term.branch.default
+targetEntityType: taxonomy_term
+bundle: branch
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_suject:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

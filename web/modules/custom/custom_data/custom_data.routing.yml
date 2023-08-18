@@ -1,0 +1,14 @@
+custom_event_dashboard.dashboard:
+  path: "/event-dashboard"
+  defaults:
+    _controller: '\Drupal\custom_data\Controller\EventDashboardController::dashboard'
+  requirements:
+    _permission: "access content"
+
+custom_data.update_joining_year:
+  path: "/update-form"
+  defaults:
+    _form: '\Drupal\custom_data\Form\MyCustomModuleForm'
+    _title: "Update Joining Year"
+  requirements:
+    _permission: "administer site configuration"

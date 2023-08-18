@@ -1,0 +1,35 @@
+<div class="user-dashboard">
+	<h2>User Data by Joining Year and Passing Year</h2>
+	<table>
+		<thead>
+			<tr>
+				<th>User ID</th>
+				<th>Display Name</th>
+				<th>Joining Year</th>
+				<th>Passing Year</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for user in user_data %}
+				<tr>
+					<td>{{ user.user_id }}</td>
+					<td>
+						{% for display_name_row in display_name_data %}
+							{% if display_name_row.user_id == user.user_id %}
+								{{ display_name_row.display_name }}
+							{% endif %}
+						{% endfor %}
+					</td>
+					<td>{{ user.joining_date }}</td>
+					<td>
+						{% for passing_year_row in passing_year_data %}
+							{% if passing_year_row.user_id == user.user_id %}
+								{{ passing_year_row.passing_year }}
+							{% endif %}
+						{% endfor %}
+					</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>

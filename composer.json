@@ -23,6 +23,7 @@
         "drupal/core-project-message": "^10.0",
         "drupal/core-recommended": "^10.0",
         "drupal/devel": "^5.0",
+        "drupal/miniorange_2fa": "^5.1",
         "drupal/video_embed_field": "^2.5",
         "drush/drush": "^12.1"
     },

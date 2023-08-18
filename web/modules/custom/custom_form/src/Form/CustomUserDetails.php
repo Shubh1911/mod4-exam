@@ -2,18 +2,17 @@
 
 /**
  * @file
- *  A form to collect an email address for RSVP details.
+ * A form to collect an email address for RSVP details.
  */
+
 namespace Drupal\custom_form\Form;
 
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\taxonomy\Entity\Vocabulary;
 
-
 class CustomUserDetails extends FormBase
 {
-  // Attempt to get the fully loaded node object of the viewed page.
 
   /**
    * {@inheritdoc}
@@ -28,35 +27,34 @@ class CustomUserDetails extends FormBase
    */
   public function buildForm(array $form, FormStateInterface $form_state)
   {
-
     $form['full_name'] = [
       '#type' => 'textfield',
-      '#title' => ('Full Name'),
+      '#title' => $this->t('Full Name'),
       '#required' => TRUE,
     ];
 
     $form['email'] = [
       '#type' => 'email',
-      '#title' => ('Email Address'),
+      '#title' => $this->t('Email Address'),
       '#required' => TRUE,
     ];
 
     $form['password'] = [
       '#type' => 'password',
-      '#title' => ('Password'),
+      '#title' => $this->t('Password'),
       '#required' => TRUE,
     ];
 
     $form['phone_number'] = [
       '#type' => 'tel',
-      '#title' => 'Phone Number',
+      '#title' => $this->t('Phone Number'),
       '#required' => TRUE,
     ];
 
     $form['stream'] = [
       '#type' => 'entity_autocomplete',
       '#target_type' => 'taxonomy_term',
-      '#title' => ('Stream'),
+      '#title' => $this->t('Stream'),
       '#required' => TRUE,
       '#selection_settings' => [
         'target_bundles' => ['branch'],
@@ -65,24 +63,27 @@ class CustomUserDetails extends FormBase
 
     $form['joining_year'] = [
       '#type' => 'number',
-      '#title' => ('Joining Year'),
+      '#title' => $this->t('Joining Year'),
       '#required' => TRUE,
     ];
 
     $form['passing_year'] = [
       '#type' => 'number',
-      '#title' => ('Passing Year'),
+      '#title' => $this->t('Passing Year'),
       '#required' => TRUE,
     ];
 
     $form['submit'] = [
       '#type' => 'submit',
-      '#value' => ('Submit'),
+      '#value' => $this->t('Submit'),
     ];
-    return $form;
 
+    return $form;
   }
 
+  /**
+   * {@inheritdoc}
+   */
   public function submitForm(array &$form, FormStateInterface $form_state)
   {
     // Create a new user using the submitted form data.

@@ -11,8 +11,13 @@ module:
   config: 0
   contact: 0
   contextual: 0
+  custom_data: 0
+  custom_form: 0
+  custom_node_cleanup: 0
   datetime: 0
   dblog: 0
+  devel: 0
+  devel_generate: 0
   dynamic_page_cache: 0
   editor: 0
   field: 0
@@ -23,8 +28,10 @@ module:
   history: 0
   image: 0
   link: 0
+  media: 0
   menu_link_content: 0
   menu_ui: 0
+  miniorange_2fa: 0
   mysql: 0
   node: 0
   options: 0
@@ -40,10 +47,15 @@ module:
   tour: 0
   update: 0
   user: 0
+  vem_migrate_oembed: 0
+  video_embed_field: 0
+  video_embed_media: 0
   views_ui: 0
   views: 10
   standard: 1000
 theme:
   olivero: 0
   claro: 0
+  stable9: 0
+  bootstrap5: 0
 profile: standard

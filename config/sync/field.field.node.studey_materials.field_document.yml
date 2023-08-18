@@ -1,0 +1,27 @@
+uuid: 957e40a7-1399-4ce0-9695-cd691a6c5c6d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_document
+    - node.type.studey_materials
+  module:
+    - file
+id: node.studey_materials.field_document
+field_name: field_document
+entity_type: node
+bundle: studey_materials
+label: document
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: txt
+  max_filesize: ''
+  description_field: false
+field_type: file

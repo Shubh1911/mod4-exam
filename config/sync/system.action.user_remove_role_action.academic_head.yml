@@ -1,0 +1,14 @@
+uuid: 2875c0d9-cdfa-4d3a-a4c5-879ae93d6a66
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.academic_head
+  module:
+    - user
+id: user_remove_role_action.academic_head
+label: 'Remove the Academic Head role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: academic_head

@@ -1,0 +1,5 @@
+name: "Custom Node Cleanup"
+type: module
+description: "Deletes nodes older than 6 months."
+core_version_requirement: ^10
+package: Custom

@@ -1,0 +1,25 @@
+uuid: ad745de8-8cb4-4e58-86d7-15de1da78ccc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_video1
+    - node.type.studey_materials
+  module:
+    - video_embed_field
+id: node.studey_materials.field_video1
+field_name: field_video1
+entity_type: node
+bundle: studey_materials
+label: video
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_providers:
+    youtube_playlist: youtube_playlist
+    vimeo: '0'
+    youtube: '0'
+field_type: video_embed_field

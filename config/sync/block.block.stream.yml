@@ -1,0 +1,35 @@
+uuid: b48d5c93-dd49-4e76-8981-b28e6fd3cbb3
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.stream
+  module:
+    - system
+    - user
+  theme:
+    - bootstrap5
+id: stream
+theme: bootstrap5
+region: nav_additional
+weight: 0
+provider: null
+plugin: 'system_menu_block:stream'
+settings:
+  id: 'system_menu_block:stream'
+  label: stream
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      administrator: administrator
+      student: student
+      academic_head: academic_head

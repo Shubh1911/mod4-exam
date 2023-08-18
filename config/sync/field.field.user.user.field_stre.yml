@@ -1,0 +1,30 @@
+uuid: faf99ff2-47fa-4f60-baef-d0df68a2ebcd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_stre
+    - taxonomy.vocabulary.branch
+  module:
+    - user
+id: user.user.field_stre
+field_name: field_stre
+entity_type: user
+bundle: user
+label: stream
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      branch: branch
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
